@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 40px;
+}
+.card{
+    
+    padding-top: 10px;
+    width: 45%;
+    height: 400px;
+    margin-left: 390px;
+    box-shadow: 0 8px 10px rgb(67, 63, 63);
+}
+button{
+    background-color: rgb(87, 181, 87);
+    width: 200px;
+}
+input, select, button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+}
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (min-width: 720px) and (max-width: 1080px) {
+    .card{
+    
+    padding-top: 10px;
+    width: 80%;
+    height: 450px;
+    margin-left: 100px;
+    box-shadow: 0 8px 10px rgb(67, 63, 63);
+}
+}
+@media (min-width: 240px) and (max-width: 720px) {
+    .card{
+    
+    padding-top: 10px;
+    width: 80%;
+    height: 500px;
+    margin-left: 50px;
+    box-shadow: 0 8px 10px rgb(67, 63, 63);
+}
+}

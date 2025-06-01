@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: #e9e9eb;
+    color: rgb(240, 239, 239);
+    font-family: sans-serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .slider-container {
+    width: 1100px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slides-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 1s ease-in-out;
+  }
+
+  .slide {
+    width: 100%;
+    height: 600px;
+    padding: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: #313135;
+    margin-bottom: 2px;
+    position: relative;
+  }
+
+  .slide-text {
+    transition: all 0.2s ease-out;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .slide.fade-out .slide-text {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+ .slide-text.animate-text{
+  animation: zoomOutFromTop 0.8s ease-out forwards;
+  animation-delay: 1s; 
+}
+
+
+@keyframes zoomOutFromTop {
+  0% {
+    opacity: 0;
+    transform: scale(1.2) translateY(0px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1) translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(10px);
+  }
+}
+
+
+
+.slider-container.final-view .slides-wrapper {
+  position: static;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  transform: none !important;
+  transition: none !important;
+}
+
+.slider-container.final-view .slide {
+  border: 1px solid black;
+  margin: 0px;
+  padding: 10px;
+  height: 300px; /* Optional: adjust for best fit */
+}
+.slider-container.final-view .card1 img{
+  height: 150px;
+}
+.slider-container.final-view .slide-text {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  font-size: 10px;
+}
+.slider-container.final-view .card2 div{
+  width: 150px;
+}
+
+.card1 img{
+  width: 100%;
+  height: 380px;
+  border-radius: 150px;
+}
+.card1{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.card1 div{
+  width: 90%;
+  padding: 5px;
+}
+
+.card1 .unlist {
+  list-style-type: none;
+   
+}
+.card1 .unlist li a {
+  text-decoration: none;
+  
+}
+
+.card1_1{
+  margin-top: 10px;
+  padding-top: 20px;
+  
+  /* text-align: center; */
+  box-shadow:0 8px 20px rgba(110, 99, 99, 0.3);
+}
+
+.card2{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+h3{
+  margin: 5px;
+  padding: 5px;
+  color: rgb(169, 169, 63);
+}
+.card2 div{
+  width: 400px;
+  gap: 1rem;
+  margin: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 8px 20px rgba(110, 99, 99, 0.3);
+ 
+}
+.card2 div ul{
+  margin-top: 10px;
+}
+.unlist {
+  list-style-type: none;
+  padding: 5px;
+}
+
+.card3 div{
+  border-radius: 5px;
+  box-shadow: 0 8px 20px rgba(126, 123, 123, 0.3);
+  
+}
+.card3 div{
+  padding: 5px;
+  margin: 20px;
+}
+
+.card4 {
+  padding: 5px;
+}
+
+.card4 > h3 {
+  text-align: center;
+  /* margin-bottom: 1rem;   */
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.project-card {
+  padding: 2px;
+  border-radius: 12px;
+}
+
+.card4 div{
+  /* border: 1px solid wheat; */
+  border-radius: 5px;
+}
+.card4_1_1{
+  margin-top: 40px;
+  box-shadow: 0 8px 20px rgba(126, 123, 123, 0.3);
+
+}
+.card4_2_2{
+  margin: 5px;
+  box-shadow: 0 8px 20px rgba(126, 123, 123, 0.3);
+
+}
+.card3.card5{
+  padding: 10px;
+  margin: 5px;
+}
+
+.card5 div{
+  border-radius: 5px;
+  box-shadow: 0 8px 20px rgba(126, 123, 123, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+.card5 div{
+  padding: 5px;
+  margin: 20px;
+}
+.card5 div ul li{
+  padding: 4px;
+  margin: 0px;
+}
+.card6 div{
+  border-radius: 5px;
+  box-shadow: 0 8px 20px rgba(126, 123, 123, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+.card6 div{
+  padding: 5px;
+  margin: 15px;
+}
+.foot{
+  display: grid;
+  grid-template-columns:repeat(3,1fr);
+}
